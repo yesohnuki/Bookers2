@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "homes/about" => "homes#about", as: "about"
   resources :books
   resources :users
+
 end
