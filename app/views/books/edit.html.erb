@@ -6,20 +6,14 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
   		<h1>Editing Book</h1>
+<%= form_with model: @book do |f| %>
+       <p>Title</p>
+      <%= f.text_field :title,class: "form-control" %>
+       <p>Opinion</p>
+      <%= f.text_area :body,class: "form-control" %>
+      <%= f.submit 'Update Book',class:"btn btn-success" %>
+      <% end %>
 
-  		<form action="/books/63240" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="68jHU-DcvWygPRbvE8oi5-eJbFCyGJ8BmaFs0256HaJf34i7V1VGTalmxi_mpnDmGE-nMon2vqIGHwtbq6wLgg" autocomplete="off">
-  <div class="form-group">
-    <label for="book_title">Title</label>
-    <input class="form-control book_title" type="text" value="test" name="book[title]" id="book_title">
-  </div>
-  <div class="form-group">
-    <label for="book_opinion">Opinion</label>
-    <textarea class="form-control book_body" name="book[body]" id="book_body">test</textarea>
-  </div>
-  <div class="form-group">
-    <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Update Book">
-  </div>
-</form>
   	<%= link_to "Edit",edit_book_path(@book.id)%>
      |
     <%= link_to "Back",books_path %>
