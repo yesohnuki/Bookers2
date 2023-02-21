@@ -20,21 +20,10 @@
     <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Update Book">
   </div>
 </form>
-  		<a class="book_63240" href="/books/63240">Show</a> |
-  		<a class="back" href="/books">Back</a>
+  	<%= link_to "Edit",edit_book_path(@book.id)%>
+     |
+    <%= link_to "Back",books_path %>
   </div>
 </div>
       </div></main>
-    <footer>
-  <div class="container mt-5">
-  	<div class="row">
-    	<div class="mx-auto">
-    		<p>CopyRight Infratop.inc</p>
-    	</div>
-    </div>
-  </div>
-</footer>
-
-
-
 </body>
