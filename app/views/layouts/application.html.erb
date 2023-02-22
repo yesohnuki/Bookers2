@@ -33,8 +33,8 @@
           </li>
           <li>
             <%= link_to books_path,class:'nav-link text-light' do %>
-              <i class="fas fa-book-open" ></i>Books
-              <% end %>
+            <i class="fas fa-book-open" ></i>Books
+            <% end %>
           </li>
           <li>
            <%= link_to destroy_user_session_path, method: :delete,class:'nav-link text-light' do %>
@@ -42,11 +42,21 @@
            <% end %>
            </li>
            <% else %>
+           <li>
+            <%= link_to root_path,class:'nav-link text-light' do %>
+            <i class="fas fa-home" ></i>Home
+           </li>
+           <li>
+             <%= link_to about_path,class:'nav-link text-light' do %>
+            <i class="fas fa-link" ></i>About
+           </li>
           <li>
-            <%= link_to "新規登録", new_user_registration_path %>
+            <%= link_to new_user_registration_path,class:'nav-link text-light' do %>
+            <i class="fas fa-user-plus" ></i>Sin up
           </li>
           <li>
-            <%= link_to "ログイン", new_user_session_path %>
+            <%= link_to new_user_session_path,class:'nav-link text-light' do%>
+            <i class="fas fa-sign-in-alt"></i>Log in
           </li>
 
            <% end %>
