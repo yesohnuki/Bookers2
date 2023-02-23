@@ -4,6 +4,7 @@ before_action :is_matching_login_user, only: [:edit, :update]
  def show
   @user = User.find(params[:id])
   @book = Book.new
+  @books = @user.books
  end
 
  def update
